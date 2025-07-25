@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken")
 const { registerUser, loginUser } = require('./controller/auth/authController')
 //Routes here
 const authRoute = require("./routes/authRoute")
+const productRoute = require("./routes/productRoute")
 
 //Routes end here
 require('dotenv').config()
@@ -22,8 +23,8 @@ app.get("/",(req,res)=>{
         message:"Hello From Digital Momo"
     })
 })
-app.use("",authRoute)
-
+app.use("/api",authRoute)
+app.use("/api",productRoute)
 
 
 
