@@ -1,5 +1,5 @@
 const express = require('express')
-const { connectDatabase } = require('./database/indes')
+const { connectDatabase } = require('./database/index')
 const User = require('./model/userModel')
 const app = express()
 const bcrypt = require('bcrypt')
