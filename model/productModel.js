@@ -21,6 +21,9 @@ const productSchema = new Schema({
     producStatus: {
         type:String,
         enum :["available","unavailable"]
+    },
+    productImage:{
+        type:String
     }
 
 },{

@@ -11,10 +11,15 @@ const productRoute = require("./routes/productRoute")
 
 //Routes end here
 require('dotenv').config()
+//jon format data handle ko lagi use gareko
+
 app.use(express.json())
+//form bata aayako data handle ko lagi use gareko
 app.use(express.urlencoded({extended : true}))
 
+app.use(express.static("uploads"))
 
+//give permision to access uploads folder
 connectDatabase(process.env.MONGO_URI)
 
 // test api to check if server is live or not 
